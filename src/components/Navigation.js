@@ -1,5 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import logo from '../assets/logo.jpeg';
+// import logo2 from '../assets/logo2.jpeg';
+// import logo3 from '../assets/logo3.jpeg';
+import logo4 from '../assets/logo4.jpg';
+
 
 const paths = [
     ['Inicio', '/'],
@@ -9,33 +14,19 @@ const paths = [
 
 const Navigation = props => {
 
-    // return <div className='navbar border shadow p-3 mb-3 bg-white rounded '>
-    //     <div className='navbar-brand col-sm '>
-    //         <span className='h4'>Nutrizapp</span>
-    //     </div>
-    //     <div className='col-sm row'>
-    //         {[ 
-    //             ['Home', '/'],
-    //             ['Projects', '/projects']
-    //         ].map( arr => 
-    //             <Link key={arr[0]} to={arr[1]} className='border btn btn-default col-sm'>
-    //                 {arr[0]}
-    //             </Link>
-    //         )}
-    //     </div>
-    // </div>
-    return <div className='row border shadow p-3 mb-3 bg-white mx-0 px-0'>
-        <div className='col-md-2 '>
+    return <div className='row d-flex justify-content-center'>
+        <div className='col-md-2 d-flex justify-content-center align-items-center'>
             <img
-                className='img-responsive' 
+                className='img-fluid ' 
                 alt='Logo' 
-                style={{width: '100%', height: '100%', backgroundColor: 'red'}} 
-                src='https://via.placeholder.com/150'
+                style={{backgroundColor: 'red', width: 150, height: 150}} 
+                src={logo4}
             />
         </div>
 
-        <div className='col-md-8 '>
+        <div className='col-md-9 '>
             <div className='row'>
+
                 <div className='col-12 text-center display-4'>
                     NUTRIZAPP
                 </div>
@@ -43,12 +34,12 @@ const Navigation = props => {
             <hr />
             <div className='row'>
                 {paths.map( arr => 
-                    <Link className='col  text-center border p-2 text-decoration-none' to={arr[1]} >{arr[0]}</Link>
+                    <Link className='col text-center border p-2 text-decoration-none' style={{color: '#00c70f'}} to={arr[1]} >{arr[0]}</Link>
                 )}
             </div>
         </div>
         
-        <div className='col-md-2 '></div>
+        {/* <div className='col-md-2 '></div> */}
     </div>
 }
 

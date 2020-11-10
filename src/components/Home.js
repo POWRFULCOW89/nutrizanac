@@ -1,20 +1,71 @@
 import React from 'react';
+import zapp from '../assets/Zapp1.jpg';
+import zapp2 from '../assets/Zapp2.jpg';
+
+const Section = props => {
+    return <>
+        <div className='col-md-11 mt-5'>
+            <div className={`display-4 border-bottom ${props.right ? 'text-right' : ''}`}>
+                {props.title}
+            </div>
+        </div>
+        <div className='col-md-11 mt-3'>
+            <div className={`${props.right ? 'text-right' : ''}`}>
+                {props.desc}
+            </div>
+        </div>
+    </>;
+}
 
 const Home = props => {
 
     return <div className='container-fluid row d-flex justify-content-center mx-0 px-0 py-5'>
-        <div className='col row d-flex justify-content-center align-items-center'>
-            <div className='col-md-8 '>
-                <div className='d-flex justify-content-left align-items-center h-100 h1'>
-                    Texto introductorio que atraiga al cliente Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+        <div className='col row d-flex justify-content-center align-items-center '>
+            <div className='col  d-flex justify-content-center align-items-center flex-column' 
+                // style={styles.zapote}
+                
+                // style={{position: 'relative'}}
+            >
+                <div 
+                // style={{position: 'absolute'}}
+                    className='display-4 text-center my-2'
+                >
+                    Donde la nutrición y la naturaleza se juntan.
                 </div>
-            </div>
-            <div className='col-md-4 '>
-                <img className='img-responsive' alt='Imagen principal' src='https://via.placeholder.com/300' />
+                <img alt='Nutrizapp' src={zapp2} className='img-fluid'/>
             </div>
 
+            <Section title='¿Quiénes somos?' desc='Somos estudiantes del Tecnológico de Veracruz, de la carrera de Ingeniería Mecatrónica' />
+
+            <Section right title='¿Qué es?' desc={<div>
+                <b>Nutrizapp</b> es un suplemento nutritivo artesanal, ideado para personas que padecen diabetes y condiciones similares, sin mermar su salud;
+                aunque cualquiera, desde niños hasta personas de avanzada edad, pueden consumirlo.
+                Existen presentaciones en barritas y muffins en diferentes tamaños.
+            </div>} /> 
+
+            <Section title='¿Qué contiene?' desc={<div>
+                El ingrediente principal de Nutrizapp es el zapote negro, fruta mexicana de gran sabor y tradición popular. Además, Nutrizapp está elaborado con:
+
+                <ul class="row mt-4 d-flex justify-content-center align-items-center px-0">
+                    <li class="list-group-item text-center m-1 border col-md-3 ">Nuez</li>
+                    <li class="list-group-item text-center m-1 border col-md-3 ">Avena</li>
+                    <li class="list-group-item text-center m-1 border col-md-3 ">Arándanos secos</li>
+                    <li class="list-group-item text-center m-1 border col-md-3 ">Aceite de coco</li>
+                    <li class="list-group-item text-center m-1 border col-md-3 ">Harina sin blanquear</li>
+                </ul>
+            </div>} /> 
         </div>
     </div>
 }
+
+const styles = {
+    zapote: {
+        height: 500,
+        // backgroundImage: `url("../assets/Zapp1.jpg")`,
+        backgroundImage: `url(${zapp})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover'
+    },
+};
 
 export default Home;
