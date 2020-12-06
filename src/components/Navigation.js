@@ -28,7 +28,7 @@ const Navigation = props => {
             <div className='row'>
 
                 <div className='col-12 text-center display-4'>
-                    NUTRIZAPP
+                    NUTRIZANAC
                 </div>
             </div>
             <hr />

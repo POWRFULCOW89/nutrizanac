@@ -32,19 +32,19 @@ const Home = props => {
                 >
                     Donde la nutrición y la naturaleza se juntan.
                 </div>
-                <img alt='Nutrizapp' src={zapp2} className='img-fluid'/>
+                <img alt='NutriZanac' src={zapp2} className='img-fluid'/>
             </div>
 
             <Section title='¿Quiénes somos?' desc='Somos estudiantes del Tecnológico de Veracruz, de la carrera de Ingeniería Mecatrónica' />
 
             <Section right title='¿Qué es?' desc={<div>
-                <b>Nutrizapp</b> es un suplemento nutritivo artesanal, ideado para personas que padecen diabetes y condiciones similares, sin mermar su salud;
+                <b>NutriZanac</b> es un suplemento nutritivo artesanal, ideado para personas que padecen diabetes y condiciones similares, sin mermar su salud;
                 aunque cualquiera, desde niños hasta personas de avanzada edad, pueden consumirlo.
                 Existen presentaciones en barritas y muffins en diferentes tamaños.
             </div>} /> 
 
             <Section title='¿Qué contiene?' desc={<div>
-                El ingrediente principal de Nutrizapp es el zapote negro, fruta mexicana de gran sabor y tradición popular. Además, Nutrizapp está elaborado con:
+                El ingrediente principal de NutriZanac es el zapote negro, fruta mexicana de gran sabor y tradición popular. Además, NutriZanac está elaborado con:
 
                 <ul class="row mt-4 d-flex justify-content-center align-items-center px-0">
                     <li class="list-group-item text-center m-1 border col-md-3 ">Nuez</li>
