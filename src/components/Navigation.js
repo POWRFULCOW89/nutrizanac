@@ -8,8 +8,7 @@ import logo4 from '../assets/logo4.jpg';
 
 const paths = [
     ['Inicio', '/'],
-    ['Producto', '/producto'],
-    ['Contacto', '/contacto']
+    ['Producto', '/producto']
 ];
 
 const Navigation = props => {
@@ -17,9 +16,9 @@ const Navigation = props => {
     return <div className='row d-flex justify-content-center'>
         <div className='col-md-2 d-flex justify-content-center align-items-center'>
             <img
-                className='img-fluid ' 
+                className='img-fluid w-100' 
                 alt='Logo' 
-                style={{backgroundColor: 'red', width: 150, height: 150}} 
+                style={{backgroundColor: 'red'}} 
                 src={logo4}
             />
         </div>
@@ -34,7 +33,7 @@ const Navigation = props => {
             <hr />
             <div className='row'>
                 {paths.map( arr => 
-                    <Link className='col text-center border p-2 text-decoration-none' style={{color: '#00c70f'}} to={arr[1]} >{arr[0]}</Link>
+                    <Link className='col text-center border p-2 text-decoration-none ' style={{color: '#00c70f', fontSize: 20}} to={arr[1]} >{arr[0]}</Link>
                 )}
             </div>
         </div>

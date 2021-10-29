@@ -1,4 +1,4 @@
-import './App.css';
+
 import zapote from './assets/zapote.jpg'
 import {
   BrowserRouter as Router,
@@ -42,9 +42,12 @@ function App() {
 
 const styles = {
   bg: {
+    // width: '100vw',
     backgroundImage: `url(${zapote})`,
-    backgroundRepeat: 'no-repeat',
+    // backgroundRepeat: 'repeat-y',
+    // backgroundRepeat: 'repeat-y'
     backgroundSize: 'cover'
+    // object-fit: 'cover',
   },
   main: {
     // opacity: '0.95',
