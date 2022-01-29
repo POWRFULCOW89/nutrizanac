@@ -10,8 +10,6 @@ Simple React App leveraging React Router for a light but meaningful user experie
 - Coconut oil
 - Unbleached flour
 
-The project is hosted using Firebase Hosting.
-
 ### Install
 
 1. Clone the repo:
