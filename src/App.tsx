@@ -1,3 +1,4 @@
+import React from "react";
 import zapote from "./assets/zapote.jpg";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
@@ -14,7 +15,7 @@ function App() {
   return (
     <>
       <div
-        className="d-flex justify-content-center bg-success"
+        className="d-flex justify-content-center bg-success container-fluid"
         style={styles.bg}
       >
         <div
@@ -23,8 +24,8 @@ function App() {
           } border rounded-bottom shadow p-3 mb-3 bg-white mx-0 px-0`}
           style={styles.main}
         >
-          <Router className={`container-fluid`}>
-            <Navigation className="d-flex border" />
+          <Router>
+            <Navigation />
 
             <Switch>
               <Route path="/" exact component={() => <Home />} />

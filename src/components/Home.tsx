@@ -1,7 +1,13 @@
 import React from "react";
 import zapp2 from "../assets/Zapp2.jpg";
 
-const Section = (props) => {
+interface Section {
+  title: string;
+  desc: React.ReactNode;
+  right?: boolean;
+}
+
+const Section = (props: Section) => {
   return (
     <>
       <div className="col-md-11 mt-5">
@@ -20,7 +26,7 @@ const Section = (props) => {
   );
 };
 
-const Home = (props) => {
+const Home = () => {
   return (
     <div className="container-fluid row d-flex justify-content-center mx-0 px-0 py-5">
       <div className="col row d-flex justify-content-center align-items-center ">
@@ -65,20 +71,20 @@ const Home = (props) => {
               El ingrediente principal de NutriZanac es el zapote negro, fruta
               mexicana de gran sabor y tradición popular. Además, NutriZanac
               está elaborado con:
-              <ul class="row mt-4 d-flex justify-content-center align-items-center px-0">
-                <li class="list-group-item text-center m-1 border col-md-3 ">
+              <ul className="row mt-4 d-flex justify-content-center align-items-center px-0">
+                <li className="list-group-item text-center m-1 border col-md-3 ">
                   Nuez
                 </li>
-                <li class="list-group-item text-center m-1 border col-md-3 ">
+                <li className="list-group-item text-center m-1 border col-md-3 ">
                   Avena
                 </li>
-                <li class="list-group-item text-center m-1 border col-md-3 ">
+                <li className="list-group-item text-center m-1 border col-md-3 ">
                   Arándanos secos
                 </li>
-                <li class="list-group-item text-center m-1 border col-md-3 ">
+                <li className="list-group-item text-center m-1 border col-md-3 ">
                   Aceite de coco
                 </li>
-                <li class="list-group-item text-center m-1 border col-md-3 ">
+                <li className="list-group-item text-center m-1 border col-md-3 ">
                   Harina sin blanquear
                 </li>
               </ul>
