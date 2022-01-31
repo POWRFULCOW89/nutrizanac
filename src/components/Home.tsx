@@ -1,13 +1,17 @@
 import React from "react";
 import zapp2 from "../assets/Zapp2.jpg";
 
-interface Section {
+// interface PageSection {
+//   title: string;
+//   desc: React.ReactNode;
+//   right?: boolean;
+// }
+
+const PageSection = (props: {
   title: string;
   desc: React.ReactNode;
   right?: boolean;
-}
-
-const Section = (props: Section) => {
+}) => {
   return (
     <>
       <div className="col-md-11 mt-5">
@@ -45,12 +49,12 @@ const Home = () => {
           <img alt="NutriZanac" src={zapp2} className="img-fluid" />
         </div>
 
-        <Section
+        <PageSection
           title="¿Quiénes somos?"
           desc="Somos estudiantes del Tecnológico de Veracruz, de la carrera de Ingeniería Mecatrónica"
         />
 
-        <Section
+        <PageSection
           right
           title="¿Qué es?"
           desc={
@@ -64,7 +68,7 @@ const Home = () => {
           }
         />
 
-        <Section
+        <PageSection
           title="¿Qué contiene?"
           desc={
             <div>
